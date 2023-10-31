@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+			"connection\\":"src/connection",
+			"controller\\":"src/controller",
+			"view\\":"src/view",
+        }
+    }
+}
