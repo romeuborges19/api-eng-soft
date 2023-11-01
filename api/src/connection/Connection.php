@@ -1,6 +1,6 @@
 <?php
 
-namespace Connection;
+namespace connection;
 use PDOExeption;
 
 class Connection{
@@ -14,7 +14,7 @@ class Connection{
 		try { 
 			$connection = pg_connect("host=$host port=$port dbname=$dbName user=$user password=$password");
 			return $connection;
-		} catch (\PDOExeption $error) {
+		} catch (PDOExeption $error) {
 			echo "Erro na conexão: " . $error->getMessage();
 		}
 	}
