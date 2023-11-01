@@ -11,6 +11,7 @@ class ItemController{
 		error_log("testando");
 		echo "criando item controller";
 	}
+
 	function register_item($name, $description){
 		$api = new Connection();
 
@@ -26,6 +27,17 @@ class ItemController{
 
 		$response = $api->API($url, $method, $data);
 		return $response;
+	}
+
+	function get_items(){
+		$api = new Connection();
+		$url = "http://localhost:8000/";
+		$data = [];
+
+		$method = "GET";
+		$response = $api->API($url, $method, $data);
+		return $response;
+
 	}
 }
 

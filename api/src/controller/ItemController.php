@@ -32,6 +32,13 @@ class ItemController{
 			return $data;
 		}
 	} 
+
+	function get_items(){
+		$items = $this->item_model->get_items();
+
+		$items = json_encode($items);
+		return $items;
+	}
 }
 
 ?>
