@@ -7,6 +7,8 @@ class Connection {
 		error_log("FUNÇÃO API");
 		$require = curl_init();
 
+		error_log('data: ' . $data . 'url: '  . $url . 'method: ' . $method);
+
 		error_log("require feito");
 		curl_setopt($require, CURLOPT_URL, $url);
 		curl_setopt ($require, CURLOPT_RETURNTRANSFER, true);
@@ -31,6 +33,9 @@ class Connection {
 		curl_setopt($require, CURLOPT_TIMEOUT, 30);
 
 		$response = curl_exec($require);
+		if( $response === false )
+			syslog(LOG_INFO , curl_error($require));
+
 		return $response;
 	}
 }

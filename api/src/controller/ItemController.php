@@ -1,7 +1,7 @@
 <?php
 
 namespace controller;
-require_once("api/vendor/autoload.php");
+require_once ("api/src/model/ItemModel.php");
 use models\ItemModel;
 
 class ItemController{
@@ -12,7 +12,7 @@ class ItemController{
 	}
 
 	function create_item($json_object){
-		$data = json_decode($json_object);
+		$data = json_decode($json_object, true);
 
 		$item_data = [
 			'name' => $data['name'],

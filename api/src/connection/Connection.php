@@ -1,7 +1,6 @@
 <?php
 
 namespace connection;
-require_once("vendor/autoload.php");
 use PDOExeption;
 
 class Connection{

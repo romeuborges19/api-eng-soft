@@ -1,5 +1,6 @@
 <?php
 	error_log("CHEGOU NA API!");
+	require_once ("api/src/controller/ItemController.php");
 	use controller\ItemController;
 
 	header("Content-Type: application/json");
@@ -9,7 +10,7 @@
 
 	if ($method=="POST") {
 		switch($url){
-			case "item/create":
+			case "/item/create":
 				error_log("chegou na API!!");
 				$item_controller = new ItemController();
 				

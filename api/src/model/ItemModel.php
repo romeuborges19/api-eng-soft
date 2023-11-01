@@ -1,7 +1,7 @@
 <?php
 
 namespace models;
-require_once("api/vendor/autoload.php");
+require_once ("api/src/connection/Connection.php");
 use Connection\Connection;
 
 class ItemModel {

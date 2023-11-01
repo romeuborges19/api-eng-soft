@@ -23,8 +23,7 @@ class ItemController{
 
 		$data = json_encode($data);
 		$method = "POST";
-		error_log("codificado");
-		var_dump($api->API($url, $method, $data));
+
 		$response = $api->API($url, $method, $data);
 		return $response;
 	}

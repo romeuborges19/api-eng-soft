@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <h1>Create Item</h1>
 	<p>Create Item:</p>
 
-	<form method="POST" action="/item/create">
+	<form method="POST" >
 		<input type="text" name="name" placeholder="Item's name">
 		<input type="text" name="description" placeholder="Item's description">
 		<input type="submit" value="Create Item">	
