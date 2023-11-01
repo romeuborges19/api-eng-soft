@@ -1,6 +1,7 @@
 <?php
 
 namespace models;
+require_once("api/vendor/autoload.php");
 use Connection\Connection;
 
 class ItemModel {

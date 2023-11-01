@@ -1,1 +1,3 @@
-List of items
+List of items <br><br>
+
+<a href="/item/create">Create Item</a>

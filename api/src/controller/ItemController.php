@@ -1,6 +1,7 @@
 <?php
 
 namespace controller;
+require_once("api/vendor/autoload.php");
 use models\ItemModel;
 
 class ItemController{

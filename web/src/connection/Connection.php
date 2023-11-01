@@ -4,8 +4,10 @@ namespace connection;
 
 class Connection {
 	function API($url, $method, $data) {
+		error_log("FUNÇÃO API");
 		$require = curl_init();
 
+		error_log("require feito");
 		curl_setopt($require, CURLOPT_URL, $url);
 		curl_setopt ($require, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt ($require, CURLOPT_POSTFIELDS, $data);
@@ -14,6 +16,7 @@ class Connection {
 		));
 
 		if ($method == "POST") {
+			error_log("metodo post na API");
 			curl_setopt($require, CURLOPT_POST, 1);
 		} elseif ($method == "GET") {
 			curl_setopt($require, CURLOPT_HTTPGET, 1);
@@ -24,6 +27,8 @@ class Connection {
 		} else {
 			echo "HTTP method does not exist";
 		}
+
+		curl_setopt($require, CURLOPT_TIMEOUT, 30);
 
 		$response = curl_exec($require);
 		return $response;
